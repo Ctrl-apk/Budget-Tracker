@@ -1,9 +1,8 @@
 import express from "express";
 import cors from "cors";
-import fetch from "node-fetch"; // No need for dynamic import
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 app.get("/quote", async (req, res) => {
     try {
@@ -15,4 +14,6 @@ app.get("/quote", async (req, res) => {
     }
 });
 
-app.listen(3000, () => console.log("Server running on port 3000"));
+// Ensure it works on Render
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
