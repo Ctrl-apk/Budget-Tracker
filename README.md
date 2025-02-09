@@ -9,6 +9,7 @@ This is the backend for the **Budget Tracker** application. It provides API endp
 
 ## 📂 Project Structure
 budget-tracker-backend/ 
+
 │── server.js
 
 │── node-modules/
